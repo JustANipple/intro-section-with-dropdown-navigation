@@ -42,3 +42,56 @@
     align-items: center;
     gap: 1rem;
 }
+
+.selection_dropdown_list:nth-child(1) .dropdown_list {
+    list-style: none;
+    padding-left: 3rem;
+
+    li {
+        position: relative;
+        line-height: 1.25;
+        margin-block: 1rem;
+    }
+    
+    li::before {
+        content: "";
+        position: absolute;
+        left: -2rem;
+        top: 0;
+        bottom: 0;
+        margin-bottom: auto;
+        background-image: url(../../../images/icon-todo.svg);
+        width: 1rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    li:nth-child(2)::before {
+        background-image: url(../../../images/icon-calendar.svg);
+    }
+
+    li:nth-child(3)::before {
+        background-image: url(../../../images/icon-reminders.svg);
+    }
+
+    li:nth-child(4)::before {
+        background-image: url(../../../images/icon-planning.svg);
+    }
+}
+
+.selection_dropdown_list:nth-child(2) .dropdown_list {
+    list-style: none;
+    padding-left: 1rem;
+
+    li {
+        margin-block: 1rem;
+    }
+}
+
+.menu_buttons {
+    display: grid;
+    text-align: center;
+    gap: 1rem;
+    margin-block: 2rem;
+    padding-inline-end: 1.5rem;
+}
