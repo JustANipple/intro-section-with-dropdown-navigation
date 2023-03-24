@@ -63,22 +63,30 @@ body {
   z-index: 2;
   background-color: black;
   opacity: 80%;
-  width: 15rem;
-  height: 100%;
   display: none;
 }
 
 .menu {
   position: absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 15rem;
+  background-color: white;
   display: grid;
   gap: 1rem;
   display: none;
+  padding-top: 5rem;
 }
 @media screen and (min-width: 650px) {
   .menu {
-    width: 100%;
+    padding: 0;
     display: flex;
     justify-content: space-between;
+    height: fit-content;
+    position: relative;
+    width: 100%;
   }
 }
 
@@ -90,7 +98,38 @@ body {
   .categories {
     display: flex;
     align-items: center;
+    gap: 2rem;
   }
+}
+.categories .category {
+  display: grid;
+  gap: 1rem;
+}
+@media screen and (min-width: 650px) {
+  .categories .category {
+    gap: 0.5rem;
+  }
+}
+.categories .header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.topics {
+  display: grid;
+  gap: 1rem;
+}
+.topics .topic {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.topics .topic .icon {
+  width: 1rem;
+}
+.topics .topic .text {
+  line-height: 1;
 }
 
 .sign {
