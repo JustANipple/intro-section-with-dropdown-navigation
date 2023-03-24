@@ -1,6 +1,7 @@
-const menuIcon = document.querySelector(".menu_icon");
-const darkLayer = document.querySelector(".menu_back_layer");
-const menu = document.querySelector(".menu");
+const menuIcon = document.querySelector(".nav_menu_icon");
+const darkLayer = document.querySelector(".nav_dark_layer");
+const menu = document.querySelector(".nav_menu");
+const arrow = document.querySelector(".header_arrow");
 
 menuIcon.addEventListener("click", (event) => {
     if(!menuIcon.getAttribute("src").includes("close")) {
@@ -11,5 +12,13 @@ menuIcon.addEventListener("click", (event) => {
         menuIcon.setAttribute("src", "images/icon-menu.svg");
         darkLayer.style.display = "none";
         menu.style.display = "none";
+    }
+});
+
+arrow.addEventListener("click", (event) => {
+    if(arrow.getAttribute("src").includes("down")) {
+        arrow.setAttribute("src", "images/icon-arrow-up.svg");
+    } else {
+        arrow.setAttribute("src", "images/icon-arrow-down.svg");
     }
 });

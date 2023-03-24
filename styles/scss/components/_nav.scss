@@ -1,0 +1,44 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+}
+
+.nav_dark_layer {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 80%;
+}
+
+.nav_menu {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    width: 15rem;
+    height: 100vh;
+    background-color: white;
+    padding-inline-start: 1.5rem;
+}
+
+.nav_menu_icon {
+    margin-inline-start: auto;
+    padding: 1.5rem 1rem;
+}
+
+.menu_selection {
+    display: grid;
+    gap: 1rem;
+}
+
+.list_header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}

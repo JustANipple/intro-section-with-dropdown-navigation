@@ -1,6 +1,18 @@
 /* Reset */
 @use "base/reset";
 /* Variables */
-@use "abstracts/variables";
+@use "abstracts/variables" as v;
 @use "abstracts/mixins";
 /* Components */
+@use "components/nav";
+
+body {
+    font-family: v.$ff-main;
+    font-size: v.$fs-paragraph;
+    color: v.$medium-gray;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
