@@ -1,0 +1,215 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Color */
+/* Media query */
+body {
+  font-family: "Epilogue", sans-serif;
+}
+
+.nav_bar {
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 650px) {
+  .nav_bar {
+    padding: 2rem 2.5rem;
+    justify-content: unset;
+  }
+}
+
+/* Dark back layer when menu is open in mobile */
+.menu_back_layer {
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  opacity: 70%;
+  filter: brightness(0.5);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+
+/* Menu containing the nav options for mobile and desktop */
+.menu {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15rem;
+  height: 100vh;
+  background-color: white;
+  padding: 1.5rem;
+  overflow: scroll;
+  display: none;
+}
+@media screen and (min-width: 650px) {
+  .menu {
+    width: 100%;
+    display: flex;
+<<<<<<< HEAD
+    justify-content: space-between;
+=======
+    justify-content: space-evenly;
+>>>>>>> b6bd2844d250232fbb77db7df1701da7316bd587
+    align-items: start;
+    position: unset;
+    width: max-content;
+    height: fit-content;
+  }
+}
+
+<<<<<<< HEAD
+.categories {
+=======
+.selection {
+>>>>>>> b6bd2844d250232fbb77db7df1701da7316bd587
+  display: grid;
+  gap: 1rem;
+}
+<<<<<<< HEAD
+@media screen and (min-width: 650px) {
+  .categories {
+    display: flex;
+  }
+=======
+@media screen and (min-width: 700px) {
+  .selection {
+    display: flex;
+  }
+}
+
+.dropdown_grid {
+  display: grid;
+  place-content: left;
+  gap: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 1rem;
+}
+
+.category {
+  font-size: 1.25rem;
+}
+
+.arrow {
+  margin-top: 0.5rem;
+}
+
+.list {
+  display: grid;
+  place-content: left;
+  gap: 1rem;
+  margin-inline-start: 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  margin-block: 0rem;
+}
+
+.option {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon {
+  width: 1.25rem;
+}
+
+.topic {
+  font-size: 1.25rem;
+  line-height: 1.25;
+>>>>>>> b6bd2844d250232fbb77db7df1701da7316bd587
+}
+
+.sign {
+  display: grid;
+  gap: 1rem;
+}
+<<<<<<< HEAD
+@media screen and (min-width: 650px) {
+  .sign {
+    display: flex;
+=======
+.sign .register {
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding-block: 0.5rem;
+}
+
+.close {
+  margin-left: auto;
+  margin-block-end: 1.5rem;
+}
+
+.nav_bar {
+  display: grid;
+  align-items: center;
+  padding: 1.5rem 1rem;
+}
+@media screen and (min-width: 700px) {
+  .nav_bar {
+    justify-content: unset;
+>>>>>>> b6bd2844d250232fbb77db7df1701da7316bd587
+  }
+}
+
+.menu_icon {
+  position: relative;
+  z-index: 3;
+}
+@media screen and (min-width: 650px) {
+  .menu_icon {
+    display: none;
+  }
+}
+
+/* Reset */
+/* Variables */
+/* Layout */
+/* Components *//*# sourceMappingURL=main.css.map */

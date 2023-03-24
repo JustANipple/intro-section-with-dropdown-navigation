@@ -1,0 +1,14 @@
+@use "../abstracts/variables" as v;
+
+@mixin grid ($gap: 1rem, $place-content: left) {
+    display: grid;
+    place-content: $place-content;
+    gap: $gap;
+}
+
+@mixin flex ($justify-content: center, $align-items: center, $gap: 1rem) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    gap: $gap;
+}

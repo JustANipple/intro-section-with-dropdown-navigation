@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as v;
+
+.nav_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (min-width: v.$min-width) {
+        padding: 2rem 2.5rem;
+        justify-content: unset;
+    }
+
+}

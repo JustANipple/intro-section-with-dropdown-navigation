@@ -1,0 +1,15 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+$ff-main: 'Epilogue', sans-serif;
+$fs-paragraph: 1.125rem;
+$fw-medium: 500;
+$fw-bold: 700;
+
+/* Color */
+$almost-white: hsl(0, 0%, 98%);
+$medium-gray: hsl(0, 0%, 41%);
+$almost-black: hsl(0, 0%, 8%);
+
+/* Media query */
+$min-width: 650px;
