@@ -6,7 +6,7 @@ menuIcon.addEventListener("click", (event) => {
     if(!menuIcon.getAttribute("src").includes("close")) {
         menuIcon.setAttribute("src", "images/icon-close-menu.svg");
         darkLayer.style.display = "block";
-        menu.style.display = "block";
+        menu.style.display = "grid";
     } else {
         menuIcon.setAttribute("src", "images/icon-menu.svg");
         darkLayer.style.display = "none";
