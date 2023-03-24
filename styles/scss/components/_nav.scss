@@ -120,6 +120,7 @@
 
 .dropdown_list {
     display: none;
+    transform-origin: top center;
 
     @media screen and (min-width: v.$min-width) {
         position: absolute;
@@ -142,5 +143,29 @@
     @media screen and (min-width: v.$min-width) {
         display: flex;
         margin: 0;
+    }
+}
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
+
+@keyframes growUp {
+    0% {
+        transform: scaleY(1)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(0)
     }
 }

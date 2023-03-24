@@ -20,11 +20,15 @@ for(arr of arrow) {
     arr.addEventListener("click", changeArrow);
 }
 function changeArrow() {
+    const list = this.parentNode.parentNode.children[1];
     if(this.getAttribute("src").includes("down")) {
         this.setAttribute("src", "images/icon-arrow-up.svg");
-        this.parentNode.parentNode.children[1].style.display = "block";
+        list.style.display = "block";
+        list.style.animation = "growDown .5s ease-in-out";
+
     } else {
         this.setAttribute("src", "images/icon-arrow-down.svg");
-        this.parentNode.parentNode.children[1].style.display = "none";
+        list.style.animation = "growUp .5s ease-in-out";
+        list.style.display = "none";
     }
 }

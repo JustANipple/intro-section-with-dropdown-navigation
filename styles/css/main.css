@@ -154,6 +154,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .dropdown_list {
   display: none;
+  transform-origin: top center;
 }
 @media screen and (min-width: 650px) {
   .dropdown_list {
@@ -181,6 +182,28 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes growUp {
+  0% {
+    transform: scaleY(1);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
 /* Reset */
 /* Variables */
 /* Components */
