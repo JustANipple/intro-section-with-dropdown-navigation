@@ -22,7 +22,9 @@ for(arr of arrow) {
 function changeArrow() {
     if(this.getAttribute("src").includes("down")) {
         this.setAttribute("src", "images/icon-arrow-up.svg");
+        this.parentNode.parentNode.children[1].style.display = "block";
     } else {
         this.setAttribute("src", "images/icon-arrow-down.svg");
+        this.parentNode.parentNode.children[1].style.display = "none";
     }
 }
