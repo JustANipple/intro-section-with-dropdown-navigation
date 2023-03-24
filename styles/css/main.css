@@ -53,6 +53,7 @@ p, h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   background-color: black;
   opacity: 80%;
+  display: none;
 }
 
 .nav_menu {
@@ -63,12 +64,22 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 15rem;
   height: 100vh;
   background-color: white;
+  padding-block-start: 5rem;
   padding-inline-start: 1.5rem;
+  display: none;
+}
+@media screen and (min-width: 650px) {
+  .nav_menu {
+    height: unset;
+    position: unset;
+    display: flex;
+    width: unset;
+  }
 }
 
 .nav_menu_icon {
   margin-inline-start: auto;
-  padding: 1.5rem 1rem;
+  z-index: 3;
 }
 
 .menu_selection {

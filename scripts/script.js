@@ -1,7 +1,7 @@
 const menuIcon = document.querySelector(".nav_menu_icon");
 const darkLayer = document.querySelector(".nav_dark_layer");
 const menu = document.querySelector(".nav_menu");
-const arrow = document.querySelector(".header_arrow");
+const arrow = document.querySelectorAll(".header_arrow");
 
 menuIcon.addEventListener("click", (event) => {
     if(!menuIcon.getAttribute("src").includes("close")) {
@@ -15,10 +15,14 @@ menuIcon.addEventListener("click", (event) => {
     }
 });
 
-arrow.addEventListener("click", (event) => {
-    if(arrow.getAttribute("src").includes("down")) {
-        arrow.setAttribute("src", "images/icon-arrow-up.svg");
+
+for(arr of arrow) {
+    arr.addEventListener("click", changeArrow);
+}
+function changeArrow() {
+    if(this.getAttribute("src").includes("down")) {
+        this.setAttribute("src", "images/icon-arrow-up.svg");
     } else {
-        arrow.setAttribute("src", "images/icon-arrow-down.svg");
+        this.setAttribute("src", "images/icon-arrow-down.svg");
     }
-});
+}
