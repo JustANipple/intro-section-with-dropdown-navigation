@@ -107,22 +107,22 @@
         top: 0;
         bottom: 0;
         margin-bottom: auto;
-        background-image: url(../../../images/icon-todo.svg);
+        background-image: url(../../images/icon-todo.svg);
         width: 1rem;
         background-size: contain;
         background-repeat: no-repeat;
     }
 
     li:nth-child(2)::before {
-        background-image: url(../../../images/icon-calendar.svg);
+        background-image: url(../../images/icon-calendar.svg);
     }
 
     li:nth-child(3)::before {
-        background-image: url(../../../images/icon-reminders.svg);
+        background-image: url(../../images/icon-reminders.svg);
     }
 
     li:nth-child(4)::before {
-        background-image: url(../../../images/icon-planning.svg);
+        background-image: url(../../images/icon-planning.svg);
     }
 }
 

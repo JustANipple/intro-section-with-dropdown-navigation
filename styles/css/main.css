@@ -148,19 +148,19 @@ p, h1, h2, h3, h4, h5, h6 {
   top: 0;
   bottom: 0;
   margin-bottom: auto;
-  background-image: url(../../../images/icon-todo.svg);
+  background-image: url(../../images/icon-todo.svg);
   width: 1rem;
   background-size: contain;
   background-repeat: no-repeat;
 }
 .selection_dropdown_list:nth-child(1) .dropdown_list li:nth-child(2)::before {
-  background-image: url(../../../images/icon-calendar.svg);
+  background-image: url(../../images/icon-calendar.svg);
 }
 .selection_dropdown_list:nth-child(1) .dropdown_list li:nth-child(3)::before {
-  background-image: url(../../../images/icon-reminders.svg);
+  background-image: url(../../images/icon-reminders.svg);
 }
 .selection_dropdown_list:nth-child(1) .dropdown_list li:nth-child(4)::before {
-  background-image: url(../../../images/icon-planning.svg);
+  background-image: url(../../images/icon-planning.svg);
 }
 
 .selection_dropdown_list:nth-child(2) .dropdown_list {
