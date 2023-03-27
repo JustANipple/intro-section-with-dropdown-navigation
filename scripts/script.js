@@ -29,6 +29,5 @@ function changeArrow() {
     } else {
         this.setAttribute("src", "images/icon-arrow-down.svg");
         list.style.animation = "growUp .5s ease-in-out";
-        list.style.display = "none";
     }
 }
