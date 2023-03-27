@@ -5,12 +5,18 @@
 @use "abstracts/mixins";
 /* Components */
 @use "components/nav";
+@use "components/content";
 
 body {
     font-family: v.$ff-main;
     font-size: calc(v.$fs-paragraph / 1.125);
+    background-color: v.$almost-white;
     color: v.$medium-gray;
     overflow: hidden;
+
+    @media screen and (min-width: v.$min-width) {
+        overflow: visible;
+    }
 }
 
 a {

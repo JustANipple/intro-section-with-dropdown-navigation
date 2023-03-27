@@ -19,8 +19,9 @@
     right: 0;
     width: 100vw;
     height: 100vh;
-    background-color: black;
-    opacity: 0;
+    background-color: v.$almost-black;
+    opacity: 80%;
+    display: none;
 
     @media screen and (min-width: v.$min-width) {
         opacity: 0;
@@ -34,7 +35,7 @@
     right: 0;
     width: 15rem;
     height: 100vh;
-    background-color: white;
+    background-color: v.$almost-white;
     padding-block-start: 5rem;
     padding-inline-start: 1.5rem;
     display: none;
@@ -131,7 +132,7 @@
 }
 
 .dropdown_list {
-    background-color: white;
+    background-color: inherit;
     transform-origin: top center;
     transform: scaleY(0);
     max-height: 0;
@@ -211,4 +212,8 @@
         border-radius: 1rem;
         padding-block: .75rem;
     }
+}
+
+li {
+    cursor: pointer;
 }

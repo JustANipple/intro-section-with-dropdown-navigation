@@ -1,0 +1,101 @@
+@use "../abstracts/variables" as v;
+
+.container {
+    display: grid;
+    row-gap: 3rem;
+    text-align: center;
+    height: min-content;
+
+    @media screen and (min-width: v.$min-width) {
+        grid-template-areas: 
+        "content img"
+        "sponsor img";
+        padding-inline: 10rem 7rem;
+        text-align: left;
+        align-items: end;
+        column-gap: 9rem;
+        padding-block: 2rem 8.125rem;
+        width: fit-content;
+
+        .container_img {
+            grid-area: img;
+            width: 30rem;
+            margin-inline-start: auto;
+        }
+
+        .container_content {
+            grid-area: content;
+        }
+
+        .container_sponsor {
+            grid-area: sponsor;
+        }
+    }
+}
+
+.container_content {
+    display: grid;
+    row-gap: 1.5rem;
+    
+    @media screen and (min-width: v.$min-width) {
+        row-gap: 3.5rem;
+    }
+}
+
+.content_title {
+    color: v.$almost-black;
+    font-size: calc(v.$fs-paragraph * 2);
+    line-height: 1;
+
+    @media screen and (min-width: v.$min-width) {
+        font-size: calc(v.$fs-paragraph * 4.5);
+    }
+}
+
+.content_paragraph {
+    padding-inline: 1rem;
+
+    @media screen and (min-width: v.$min-width) {
+        font-size: v.$fs-paragraph;
+        padding-inline: unset;
+        padding-inline-end: 5rem;
+    }
+}
+
+.content_button {
+    width: fit-content;
+    margin-inline: auto;
+    background-color: v.$almost-black;
+    color: v.$almost-white;
+    border: none;
+    padding: .75rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid v.$almost-black;
+
+    @media screen and (min-width: v.$min-width) {
+        margin-inline: unset;
+        font-size: v.$fs-paragraph;
+        padding: 1rem 2rem;
+    }
+}
+
+.container_sponsor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1rem;
+
+    @media screen and (min-width: v.$min-width) {
+        justify-content: unset;
+        gap: 2.5rem;
+    }
+
+    img {
+        height: 1rem;
+
+        @media screen and (min-width: v.$min-width) {
+            height: unset;
+        }
+    }
+    
+}
