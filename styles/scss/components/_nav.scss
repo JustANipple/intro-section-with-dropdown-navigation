@@ -5,6 +5,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 1rem;
+
+    @media screen and (min-width: v.$min-width) {
+        padding: 2rem 2.5rem;
+        font-size: calc(v.$fs-paragraph / 1.25);
+    }
 }
 
 .nav_dark_layer {
@@ -15,7 +20,11 @@
     width: 100vw;
     height: 100vh;
     background-color: black;
-    opacity: 80%;
+    opacity: 0;
+
+    @media screen and (min-width: v.$min-width) {
+        opacity: 0;
+    }
 }
 
 .nav_menu {
@@ -28,14 +37,18 @@
     background-color: white;
     padding-block-start: 5rem;
     padding-inline-start: 1.5rem;
+    display: none;
+    overflow: scroll;
 
     @media screen and (min-width: v.$min-width) {
         height: unset;
         position: unset;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
         padding: 0;
+        overflow: visible;
     }
 }
 
@@ -51,24 +64,30 @@
 .menu_selection {
     display: grid;
     gap: 1rem;
-    height: min-content;
 
     @media screen and (min-width: v.$min-width) {
         display: flex;
-        margin-inline: 2rem;
-        gap: 1rem;
+        margin-inline: 4rem;
+        gap: 2.5rem;
     }
 }
 
 .list_header {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .5rem;
+}
+
+.list_header:hover,
+.selection_option:hover,
+.menu_buttons a:hover {
+    filter: brightness(0.4);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
 }
 
 .selection_dropdown_list {
     position: relative;
-    height: min-content;
 }
 
 .selection_dropdown_list:nth-child(1) .dropdown_list {
@@ -78,7 +97,6 @@
     li {
         position: relative;
         line-height: 1.25;
-        margin-block: 1rem;
     }
     
     li::before {
@@ -110,22 +128,61 @@
 .selection_dropdown_list:nth-child(2) .dropdown_list {
     list-style: none;
     padding-left: 1rem;
-
-    li {
-        margin-block: 1rem;
-    }
 }
 
 .dropdown_list {
+    background-color: white;
     transform-origin: top center;
+    transform: scaleY(0);
+    max-height: 0;
+    display: grid;
+    gap: 1rem;
+    padding-block: 0;
 
     @media screen and (min-width: v.$min-width) {
         position: absolute;
         right: 0;
-        top: 3rem;
-        box-shadow: 0px 0px 1rem -.5rem black;
+        top: 1.5rem;
+        box-shadow: 0px 0px 1rem -0.7rem black;
         border-radius: 1rem;
         padding-inline: 1rem;
+        margin-block: 0;
+        width: max-content;
+    }
+}
+
+@keyframes dropList {
+    0% {
+        transform: scaleY(0);
+    }
+
+    50% {
+        max-height: fit-content;
+        
+    }
+
+    100% {
+        transform: scale(1);
+        max-height: fit-content;
+        margin-block: 1rem;
+        padding-block: .5rem;
+    }
+}
+
+@keyframes collapseList {
+    0% {
+        transform: scaleY(1);
+        max-height: fit-content;
+    }
+
+    50% {
+        transform: scaleY(0);
+    }
+
+    100% {
+        max-height: 0;
+        margin-block: 0rem;
+        padding-block: 0rem;
     }
 }
 
@@ -136,33 +193,22 @@
     margin-block: 2rem;
     padding-inline-end: 1.5rem;
     height: min-content;
+    font-size: calc(v.$fs-paragraph / 1.25);
 
     @media screen and (min-width: v.$min-width) {
         display: flex;
+        align-items: center;
         margin: 0;
     }
-}
 
-@keyframes growDown {
-    0% {
-        transform: scaleY(0)
+    a {
+        padding-inline: 1.5rem;
+        line-height: 1.25;
     }
-    80% {
-        transform: scaleY(1.1)
-    }
-    100% {
-        transform: scaleY(1)
-    }
-}
 
-@keyframes growUp {
-    0% {
-        transform: scaleY(1)
-    }
-    80% {
-        transform: scaleY(1.1)
-    }
-    100% {
-        transform: scaleY(0)
+    a:nth-child(2) {
+        border: 1px solid v.$medium-gray;
+        border-radius: 1rem;
+        padding-block: .75rem;
     }
 }
